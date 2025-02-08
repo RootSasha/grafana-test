@@ -64,22 +64,7 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     restart: always
 
-  jenkins:
-    image: jenkins/jenkins:lts
-    container_name: jenkins
-    ports:
-      - "80:8080"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-    restart: always
-
-  ssh-agent:
-    image: jenkins/ssh-agent
-    container_name: ssh-agent
-    restart: always
-
 volumes:
   grafana-data:
   prom-data:
   alert-data:
-  jenkins_home:
