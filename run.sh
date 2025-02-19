@@ -1,6 +1,5 @@
+!/bin/bash
+
 sudo apt update
-sudo apt install docker-compose -y
-sudo docker-compose up -d
-#docker swarm init
-#docker stack deploy -c docker-compose.yml monitoring
-touch hello.txt
+sudo apt install -y docker-compose
+docker-compose up -d
