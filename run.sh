@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install -y docker-compose
-sudo usermod -aG docker jenkins
-docker-compose up -d
+apt update
+apt install -y docker-compose
+docker swarm init
+docker stack deploy -c docker-compose.yml monitoring
